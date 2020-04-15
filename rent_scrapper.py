@@ -17,12 +17,6 @@ config.read("secrets/config.ini")
 API_key = config['Keys']['google_API']
 gmaps = googlemaps.Client(key=API_key)
 
-critical_address_gps = {'cole_home': {'gps':[51.1191706,-114.2229905], 'mode': 'transit', 'departure_time':datetime.datetime(2020,4,25,17)},
-                       'tiff_home': {'gps': [50.9751225,-114.0240217], 'mode': 'driving', 'departure_time':datetime.datetime(2020,4,25,17)},
-                       'acadia_clinic': {'gps': [50.9602494,-114.0471263,17], 'mode': 'driving', 'departure_time':datetime.datetime(2020,4,27,8)},
-                       'wildlife': {'gps': [51.1575318,-114.2178905], 'mode': 'driving', 'departure_time':datetime.datetime(2020,4,30,8)}
-                       }
-
 
 def extract_travel_times(directions):
     travel_times = {}
